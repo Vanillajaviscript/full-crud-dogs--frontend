@@ -9,3 +9,5 @@ const Show = () => {
     </div>
   )
 }
+
+export default Show;

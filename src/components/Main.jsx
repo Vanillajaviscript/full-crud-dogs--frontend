@@ -37,8 +37,23 @@ const Main = () => {
     })
     getDogs()
   }
+
+  const deleteDog = async (id) => {
+    await fetch(`${url}${id}`, {
+      method: "DELETE"
+    })
+    getDogs()
+  }
+
+  useEffect(() => {getDogs()}, []);
+
   return (
-    <div>main</div>
+    <main>
+      <Routes>
+        <Route path="/" element={<Index dogs={dogs} createDog={createDog}/>}/>
+        <Route path="/people/:id" element={<Show dogs={dogs} updateDog={updateDog} deleteDog={deleteDog}/>}/>
+      </Routes>
+    </main>
   )
 }
 
