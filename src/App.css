@@ -1,3 +1,18 @@
-.nav {
-  
+body {
+  padding: 20px;
+  background-color: gray;
 }
+
+
+form{
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+input, button {
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+

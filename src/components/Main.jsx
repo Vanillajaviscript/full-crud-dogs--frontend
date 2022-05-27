@@ -9,9 +9,9 @@ const Main = () => {
 
   const url = "https://full-crud-dogs--mern.herokuapp.com/dogs/";
 
-  const getDogs = () => {
-    const res = fetch(url);
-    const data = res.json();
+  const getDogs = async () => {
+    const res = await fetch(url);
+    const data = await res.json();
     setDogs(data);
     console.log(data)
   }
@@ -28,7 +28,7 @@ const Main = () => {
   }
 
   const updateDog = async (dog, id) => {
-    await fetch(`${url}${id}`, {
+    await fetch(url + id, {
       method: "PUT",
       header: {
         "Content-Type": "Application/json",
@@ -39,7 +39,7 @@ const Main = () => {
   }
 
   const deleteDog = async (id) => {
-    await fetch(`${url}${id}`, {
+    await fetch(url + id, {
       method: "DELETE"
     })
     getDogs()
@@ -50,8 +50,22 @@ const Main = () => {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<Index dogs={dogs} createDog={createDog}/>}/>
-        <Route path="/people/:id" element={<Show dogs={dogs} updateDog={updateDog} deleteDog={deleteDog}/>}/>
+        <Route 
+          path="/" 
+          element={
+            <Index 
+              dogs={dogs} 
+              createDog={createDog}/>
+            } />
+        <Route 
+          path="/dogs/:id" 
+          element={
+            <Show 
+              dogs={dogs}
+              updateDog={updateDog}
+              deleteDog={deleteDog}
+            />} 
+          />
       </Routes>
     </main>
   )
