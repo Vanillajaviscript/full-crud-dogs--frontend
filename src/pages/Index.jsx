@@ -10,15 +10,14 @@ const Index = ({dogs, createDog}) => {
     breed: "",
     age: "",
     location: "",
-    img: "",
-    description: ""
+    img: ""
   });
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.targe.name]: e.target.value
-    })
+    setForm((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }))
   };
 
   const handleSubmit = (e) => {
@@ -31,8 +30,7 @@ const Index = ({dogs, createDog}) => {
       breed: "",
       age: "",
       location: "",
-      img: "",
-      description: ""
+      img: ""
     })
   };
 
@@ -40,7 +38,7 @@ const Index = ({dogs, createDog}) => {
   return dogs.map((dog) => (
     <div className="dog-data" key={dog._id}>
       <Link to={`/dogs/${dog._id}`}>
-        <h1>{dog.name}</h1>
+        <h5>{dog.name}</h5>
       </Link>
     </div>
   ))
@@ -98,13 +96,6 @@ return (
         name="image"
         placeholder="image URL"
         value={form.img}
-        onChange={handleChange} 
-      />
-      <input 
-        type="text"
-        name="description"
-        placeholder="short description"
-        value={form.description}
         onChange={handleChange} 
       />
       <button>New Dog</button>

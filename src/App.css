@@ -1,8 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+@media only screen and (max-width: 600px) {
+  
 body {
   padding: 20px;
-  background-color: gray;
+  background-color: rgba(27, 67, 126, 0.853);
+  color: white;
 }
 
+/* .dog-description {
+  
+} */
+
+img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.589);
+  padding: 3px;
+}
 
 form{
   max-width: 800px;
@@ -12,7 +34,19 @@ form{
 input, button {
   display: inline-block;
   width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
 }
 
+button {
+  border-radius: 5px;
+  
+}
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+}

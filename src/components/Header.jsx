@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import styles from "./Header.module.css"
+
 const Header = () => {
 
   return (
-    <nav className={styles}>
+    <nav className="nav">
       <Link to="/">
-        <h2>China Rescue</h2>
+        <h6>China Rescue</h6>
       </Link>
-      <h5>Dog meat trade survivors</h5>
+        <h6>Dog meat trade survivors</h6>
+      <Link to="/about">About</Link>
     </nav>
   )
 }
