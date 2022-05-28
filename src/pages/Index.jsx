@@ -46,6 +46,7 @@ const Index = ({dogs, createDog}) => {
 const loading = () => {
   return <h1>Loading...</h1>
 }
+
 return (
   <section>
     <form onSubmit={handleSubmit}>

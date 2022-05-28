@@ -1,15 +1,27 @@
 import { Link } from "react-router-dom";
+import { FaSignInAlt, FaSignOutAlt, FaUser} from "react-icons/fa";
 
 const Header = () => {
 
   return (
-    <nav className="nav">
-      <Link to="/">
-        <h6>China Rescue</h6>
-      </Link>
-        <h6>Dog meat trade survivors</h6>
-      <Link to="/about">About</Link>
-    </nav>
+    <header className="header">
+      <div className="logo">
+        <Link to="/">China Dog Rescue</Link>
+      </div>
+    <ul>
+      <li>
+        <Link to="/login">
+          <FaSignInAlt /> Login
+        </Link>
+      </li>
+      <li>
+        <Link to="/register">
+          <FaUser /> Register
+        </Link>
+      </li>
+    </ul>
+
+    </header>
   )
 }
 

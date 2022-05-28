@@ -3,11 +3,11 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 import { useEffect, useState } from "react";
 
-
 const Main = () => {
   const [dogs, setDogs] = useState(null);
 
   const url = "https://full-crud-dogs--mern.herokuapp.com/dogs/";
+  // const url = "https://localhost:3001/users/dogs/"
 
   const getDogs = async () => {
     const res = await fetch(url);
