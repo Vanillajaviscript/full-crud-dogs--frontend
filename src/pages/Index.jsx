@@ -35,13 +35,15 @@ const Index = ({dogs, createDog}) => {
   };
 
   const loaded = () => {
-  return dogs.map((dog) => (
-    <div className="dog-data" key={dog._id}>
-      <Link to={`/dogs/${dog._id}`}>
-        <h5>{dog.name}</h5>
-      </Link>
-    </div>
-  ))
+  return (
+    <div className="dog-names"> {dogs.map((dog) => (
+      <div className="dog-data" key={dog._id}>
+        <Link to={`/dogs/${dog._id}`}>
+          <h5>{dog.name}</h5>
+        </Link>
+      </div>
+    ))}
+    </div>)
 }
 const loading = () => {
   return <h1>Loading...</h1>
@@ -49,7 +51,7 @@ const loading = () => {
 
 return (
   <section>
-    <form onSubmit={handleSubmit}>
+    <form className="form-group" onSubmit={handleSubmit}>
       <input 
         type="text"
         name="id"
@@ -94,12 +96,12 @@ return (
       />
       <input 
         type="text"
-        name="image"
+        name="img"
         placeholder="image URL"
         value={form.img}
         onChange={handleChange} 
       />
-      <button>New Dog</button>
+      <button className="btn btn-block">New Dog</button>
     </form>
     {dogs ? loaded() : loading()}
   </section>

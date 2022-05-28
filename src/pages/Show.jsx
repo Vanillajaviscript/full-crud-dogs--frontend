@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import { Grid, Box, Paper } from "@mui/material";
 
 const Show = ({ dogs, updateDog, deleteDog }) => {
   const { id } = useParams();
@@ -29,17 +29,31 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
 
   return (
     <div className="show-dogs">
-      <div className="dog-description">
-        <h4>Name: {dog.name.toUpperCase()}</h4>
-        <h4>ID: {dog.id}</h4>
-        <h4>Gender: {dog.gender}</h4>
-        <h4>Breed: {dog.breed}</h4>
-        <h4>Age: {dog.age}</h4>
-        <h4>Current location: {dog.location}</h4>
-      </div>
+      <Box sx={{ flexGrow: 1}}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} md={6}>
+            <h4>Name: {dog.name.toUpperCase()}</h4>
+          </Grid>
+          <Grid item xs={6}>
+            <h4>ID: {dog.id}</h4>
+          </Grid>
+          <Grid item xs={6}>
+            <h4>Gender: {dog.gender}</h4>
+          </Grid>
+          <Grid item xs={6} >
+            <h4>Breed: {dog.breed}</h4>
+          </Grid>
+          <Grid item xs={6}>
+            <h4>Age: {dog.age}</h4>
+          </Grid>
+          <Grid item xs={12}>
+            <h4>Current location: {dog.location}</h4>
+          </Grid>
+        </Grid>
+      </Box>
       <img src={dog.img} alt={dog.name} />
-      <button onClick={removeDog}>Delete</button>
-      <form className="edit-form" onSubmit={handleSubmit}>
+      <button className="btn btn-block" onClick={removeDog}>Delete</button>
+      <form className="form-group" onSubmit={handleSubmit}>
         <input 
           type="text"
           name="id"
@@ -89,7 +103,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           value={editForm.location}
           onChange={handleChange}
         />
-        <button onClick={handleChange}>Submit</button>
+        <button className="btn btn-block" onClick={handleChange}>Submit</button>
       </form>
     </div>
   )

@@ -1,10 +1,10 @@
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 
   return (
     <div className="footer">
-    <h5>The footer</h5>
-
+    
     </div>
   )
 }

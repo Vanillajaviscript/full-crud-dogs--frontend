@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 const Main = () => {
   const [dogs, setDogs] = useState(null);
 
-  const url = "https://full-crud-dogs--mern.herokuapp.com/dogs/";
-  // const url = "https://localhost:3001/users/dogs/"
+  // const url = "https://full-crud-dogs--mern.herokuapp.com/dogs/";
+  const url = "http://localhost:3001/dogs/"
 
   const getDogs = async () => {
     const res = await fetch(url);
@@ -30,7 +30,7 @@ const Main = () => {
   const updateDog = async (dog, id) => {
     await fetch(url + id, {
       method: "PUT",
-      header: {
+      headers: {
         "Content-Type": "Application/json",
       },
       body: JSON.stringify(dog)
