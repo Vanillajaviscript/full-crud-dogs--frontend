@@ -30,7 +30,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
   return (
     <div className="show-dogs">
       <Box sx={{ flexGrow: 1}}>
-        <Grid container spacing={1}>
+        <Grid className="dog-info" container spacing={1}>
           <Grid item xs={12} md={6}>
             <h4>Name: {dog.name.toUpperCase()}</h4>
           </Grid>
@@ -52,14 +52,14 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
         </Grid>
       </Box>
       <img src={dog.img} alt={dog.name} />
-      <button className="btn btn-block" onClick={removeDog}>Delete</button>
-      <form className="form-group" onSubmit={handleSubmit}>
+      <form className="form-group" id="form" onSubmit={handleSubmit}>
         <input 
           type="text"
           name="id"
           placeholder="id"
           value={editForm.id}
           onChange={handleChange}
+          required
         />
         <input 
           type="text"
@@ -67,6 +67,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           placeholder="name"
           value={editForm.name}
           onChange={handleChange}
+          required
         />
         <input 
           type="text"
@@ -74,6 +75,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           placeholder="gender"
           value={editForm.gender}
           onChange={handleChange}
+          required
         />
         <input 
           type="text"
@@ -81,6 +83,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           placeholder="breed"
           value={editForm.breed}
           onChange={handleChange}
+          required
         />
         <input 
           type="text"
@@ -88,6 +91,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           placeholder="age"
           value={editForm.age}
           onChange={handleChange}
+          required
         />
         <input 
           type="text"
@@ -95,6 +99,7 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           placeholder="img"
           value={editForm.img}
           onChange={handleChange}
+          required
         />
         <input 
           type="text"
@@ -102,8 +107,11 @@ const Show = ({ dogs, updateDog, deleteDog }) => {
           placeholder="location"
           value={editForm.location}
           onChange={handleChange}
+          required
         />
         <button className="btn btn-block" onClick={handleChange}>Submit</button>
+        <hr />
+        <button className="btn btn-block" onClick={removeDog}>Delete</button>
       </form>
     </div>
   )

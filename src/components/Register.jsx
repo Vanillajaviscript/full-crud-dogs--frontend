@@ -32,8 +32,8 @@ const Register = () => {
         <p>Please register to adopt</p>
       </section>
       <section className="form">
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
+        <form className="form-group" onSubmit={handleSubmit}>
+          <div>
             <input
               type="text" 
               className="form-control" 

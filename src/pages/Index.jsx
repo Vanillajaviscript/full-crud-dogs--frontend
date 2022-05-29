@@ -51,13 +51,14 @@ const loading = () => {
 
 return (
   <section>
-    <form className="form-group" onSubmit={handleSubmit}>
+    <form className="form-group" id="form" onSubmit={handleSubmit}>
       <input 
         type="text"
         name="id"
         placeholder="id number"
         value={form.id}
         onChange={handleChange} 
+        required
       />
       <input 
         type="text"
@@ -65,6 +66,7 @@ return (
         placeholder="name"
         value={form.name}
         onChange={handleChange} 
+        required
       />
       <input 
         type="text"
@@ -72,6 +74,7 @@ return (
         placeholder="gender"
         value={form.gender}
         onChange={handleChange} 
+        required
       />
       <input 
         type="text"
@@ -79,6 +82,7 @@ return (
         placeholder="breed"
         value={form.breed}
         onChange={handleChange} 
+        required
       />
       <input 
         type="text"
@@ -86,6 +90,7 @@ return (
         placeholder="age"
         value={form.age}
         onChange={handleChange} 
+        required
       />
       <input 
         type="text"
@@ -93,6 +98,7 @@ return (
         placeholder="location"
         value={form.location}
         onChange={handleChange} 
+        required
       />
       <input 
         type="text"
@@ -100,6 +106,7 @@ return (
         placeholder="image URL"
         value={form.img}
         onChange={handleChange} 
+        required
       />
       <button className="btn btn-block">New Dog</button>
     </form>
