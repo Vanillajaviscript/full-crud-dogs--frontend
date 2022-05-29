@@ -6,9 +6,8 @@ import { useEffect, useState } from "react";
 const Main = () => {
   const [dogs, setDogs] = useState(null);
 
-  // const url = "https://full-crud-dogs--mern.herokuapp.com/dogs/";
-  const url = "http://localhost:3001/dogs/"
-
+  const url = "https://full-crud-dogs--mern.herokuapp.com/dogs/";
+  
   const getDogs = async () => {
     const res = await fetch(url);
     const data = await res.json();

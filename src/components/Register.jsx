@@ -34,7 +34,7 @@ const Register = () => {
       <section className="form">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input 
+            <input
               type="text" 
               className="form-control" 
               id="name" 
