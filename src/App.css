@@ -60,7 +60,7 @@ h1 {
 
 body {
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
+  
 }
 
 .App {
@@ -79,7 +79,6 @@ li {
   line-height: 2.2;
 }
 
-
 .container {
   width: 100%;
   max-width: 960px;
@@ -93,14 +92,16 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #000000;
   margin-bottom: 60px;
+  background-color: rgba(128, 128, 128, 0.67);
 }
 
 .header ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 5px;
 }
 
 .header ul li {
@@ -186,14 +187,16 @@ img {
   border-radius: 1em;
 }
 
+.footer {
+  background-color: rgba(12, 10, 10, 0.875);
+  padding: 50px 0;
+  border-top: 1px solid #f90101;
+}
 
 
 footer {
-  top: 95vh;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-right: 10px;
-}
+  color: rgba(128, 128, 128, 0.684);
+  }
 }

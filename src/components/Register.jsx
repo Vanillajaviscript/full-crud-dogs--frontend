@@ -29,9 +29,9 @@ const Register = () => {
         <h1>
           <FaUser /> Register
         </h1>
-        <p>Please register to see all adoptable dogs</p>
+        <p>Please register to adopt</p>
       </section>
-      <section classNamle="form">
+      <section className="form">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input 

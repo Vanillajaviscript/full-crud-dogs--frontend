@@ -25,7 +25,7 @@ const Login = () => {
         <h1>
           <FaSignInAlt /> Login
         </h1>
-        <p>Please log in to see all adoptable dogs</p>
+        <p>Please log in to begin adoption application</p>
       </section>
       <section className="form">
         <form onSubmit={handleSubmit}>
